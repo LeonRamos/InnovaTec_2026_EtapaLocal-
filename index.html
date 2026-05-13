@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -23,51 +22,50 @@
         }
 
         header {
-    background: linear-gradient(135deg, var(--primary-blue), #0d47a1);
-    color: var(--white);
-    padding: 30px 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
+            background: linear-gradient(135deg, var(--primary-blue), #0d47a1);
+            color: var(--white);
+            padding: 30px 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
 
-.header-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    gap: 20px;
-}
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 20px;
+        }
 
-.header-content img {
-    max-height: 120px;
-    width: auto;
-}
+        .header-content img {
+            max-height: 120px;
+            width: auto;
+        }
 
-.header-text {
-    text-align: center;
-}
+        .header-text {
+            text-align: center;
+        }
 
-.header-text h1 {
-    margin: 0;
-}
+        .header-text h1 {
+            margin: 0;
+        }
 
-.header-text p {
-    margin-top: 8px;
-    font-size: 1.1em;
-    opacity: 0.95;
-}
+        .header-text p {
+            margin-top: 8px;
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .header-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
+        @media (max-width: 768px) {
+            .header-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
 
-    .header-content img {
-        margin: 0 auto;
-    }
-}
+            .header-content img {
+                margin: 0 auto;
+            }
+        }
 
         nav {
             background: var(--white);
@@ -127,7 +125,7 @@
             margin: 30px 0;
             display: flex;
             justify-content: center;
-            gap: 15px; /* Espacio entre botones */
+            gap: 15px;
             flex-wrap: wrap;
         }
 
@@ -144,9 +142,8 @@
             border: none;
         }
 
-/* Estilo específico para el botón del PDF para diferenciarlo */
         .btn-pdf {
-            background: #c62828; /* Rojo formal para PDF */
+            background: #c62828;
         }
 
         .btn-link:hover {
@@ -154,41 +151,43 @@
             filter: brightness(1.1);
             color: white;
         }
-            .lab-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 25px;
-}
 
-.lab-card {
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    padding: 20px;
-    transition: transform 0.2s;
-}
+        .lab-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
 
-.lab-card:hover {
-    transform: translateY(-4px);
-}
+        .lab-card {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            padding: 20px;
+            transition: transform 0.2s;
+        }
 
-.lab-card h4 {
-    color: var(--primary-blue);
-    margin-bottom: 15px;
-    border-bottom: 2px solid var(--accent-gold);
-    padding-bottom: 5px;
-}
+        .lab-card:hover {
+            transform: translateY(-4px);
+        }
 
-.project-item {
-    font-size: 0.9em;
-    margin-bottom: 10px;
-}
+        .lab-card h4 {
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--accent-gold);
+            padding-bottom: 5px;
+        }
 
-.project-time {
-    font-weight: bold;
-    color: #555;
-}
+        .project-item {
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        .project-time {
+            font-weight: bold;
+            color: #555;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -234,19 +233,13 @@
 
 <header>
     <div class="header-content">
-
-        <!-- Imagen izquierda -->
         <img src="img/innovatecmm.png" alt="InnovaTec">
-
-        <!-- Texto central -->
         <div class="header-text">
             <h1>InnovaTec 2026 - Etapa Local</h1>
-            <p>Innovación Tecnológica para el Desarrollo Sostenible</p>
+            <p>Cumbre Nacional de Desarrollo Tecnológico, Emprendimiento e Innovación, InnovaTecNM 2026</p>
+            <p>Instituto Tecnológico José Mario Molina Pasquel y Henríquez</p>
         </div>
-
-        <!-- Imagen derecha -->
         <img src="img/categorias.png" alt="Categorías InnovaTec">
-
     </div>
 </header>
 
@@ -258,12 +251,16 @@
 
 <div class="links-bar">
     <a href="poster/poster.pdf" target="_blank" class="btn-link btn-pdf">Ver Póster Etapa Local (PDF)</a>
-    
     <a href="https://innova.tecnm.mx/" target="_blank" class="btn-link">Sitio Oficial TecNM</a>
+    <a href="https://drive.google.com/file/d/1qlb7tQ5LxV8PN6cwoQ2mGbsxIs4VdzoK/view?usp=drive_link"
+       target="_blank"
+       class="btn-link btn-pdf">
+        Convocatoria Etapa Local (PDF)
+    </a>
 </div>
 
-    <!-- Sección Certamen de Proyectos -->
-    <section id="certamen" class="event-section">
+<!-- Sección Certamen de Proyectos -->
+<section id="certamen" class="event-section">
     <h2>Certamen de Proyectos</h2>
     <p>
         Presentación de proyectos de innovación desarrollados por los estudiantes de la institución,
@@ -273,7 +270,6 @@
     <h3>Programa · 18 de mayo de 2026</h3>
 
     <div class="lab-cards">
-
         <div class="lab-card">
             <h4>Laboratorio LDS</h4>
             <div class="project-item"><span class="project-time">10:00 – 10:20</span> · MicroEdu</div>
@@ -324,33 +320,150 @@
             <div class="project-item"><span class="project-time">11:30 – 11:50</span> · Legado Lacustre</div>
             <div class="project-item"><span class="project-time">12:00 – 12:20</span> · Recycling Tracking System</div>
         </div>
-
     </div>
 </section>
 
-    <!-- Sección HackaTec -->
-    <section id="hackatec" class="event-section">
-        <h2>HackaTec</h2>
-        <div class="coming-soon">
-            Información próximamente disponible. Secciones adicionales se integrarán según avance la planeación.
-        </div>
-    </section>
+<!-- Sección HackaTec -->
+<section id="hackatec" class="event-section">
+    <h2>HackaTec</h2>
 
-    <!-- Sección InnoBótica -->
-    <section id="innobotica" class="event-section">
-        <h2>InnoBótica</h2>
-        <div class="coming-soon">
-            Información próximamente disponible. Desafíos de robótica y automatización.
+    <p>
+        HackaTec forma parte de los eventos simultáneos de la etapa local de InnovaTecNM 2026. En esta edición,
+        los equipos desarrollarán de manera colaborativa e intensiva una propuesta de solución a un reto específico,
+        integrando tecnología, creatividad e innovación.
+    </p>
+
+    <h3>Agenda general</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Horario</th>
+                <th>Actividad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>18 de mayo de 2026</td>
+                <td>08:00 – 10:00</td>
+                <td>
+                    Presentación de retos por categoría para los equipos participantes, considerando
+                    Tecnologías Emergentes, Tecnologías para la Gestión Pública, Tecnologías para el Entretenimiento
+                    y Software Inteligente.
+                </td>
+            </tr>
+            <tr>
+                <td>19 de mayo de 2026</td>
+                <td>08:00 – 10:00</td>
+                <td>
+                    Presentación de propuestas en los laboratorios LIA y LTE. Cada equipo contará con
+                    20 minutos totales para exposición, demostración y ronda de preguntas ante el jurado.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Retos y ejes transversales</h3>
+    <p>
+        Los retos de HackaTec se organizan en categorías como Tecnologías Emergentes, Tecnologías para la Gestión Pública,
+        Tecnologías para el Entretenimiento y Software Inteligente. Las propuestas deberán integrar los ejes transversales:
+        inclusión y equidad, impacto social, sustentabilidad y sostenibilidad, y tecnologías emergentes.
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Elemento</th>
+                <th>Detalle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ejes transversales</td>
+                <td>Inclusión y equidad, impacto social, sustentabilidad y sostenibilidad, tecnologías emergentes.</td>
+            </tr>
+            <tr>
+                <td>Tiempo por equipo</td>
+                <td>20 minutos por presentación (exposición, demostración de prototipo y preguntas).</td>
+            </tr>
+            <tr>
+                <td>Participantes</td>
+                <td>
+                    Equipos multidisciplinarios de 3 a 5 estudiantes, con al menos una persona de sexo opuesto,
+                    asesorados por una persona docente.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Programa · 19 de mayo de 2026</h3>
+
+    <div class="lab-cards">
+        <div class="lab-card">
+            <h4>Laboratorio LIA</h4>
+            <div class="project-item">
+                <span class="project-time">08:00 – 08:20</span> · V-I-P
+                <br><small>Categoría: Tecnologías Emergentes</small>
+            </div>
+            <div class="project-item">
+                <span class="project-time">08:20 – 08:40</span> · SYNAP-Tech
+                <br><small>Categoría: Tecnologías Emergentes</small>
+            </div>
+            <div class="project-item">
+                <span class="project-time">08:40 – 09:00</span> · Metrica Exacta
+                <br><small>Categoría: Tecnologías para la Gestión Pública</small>
+            </div>
+            <div class="project-item">
+                <span class="project-time">09:00 – 09:20</span> · Optimus Team
+                <br><small>Categoría: Software Inteligente</small>
+            </div>
         </div>
-    </section>
-</div>
+
+        <div class="lab-card">
+            <h4>Laboratorio LTE</h4>
+            <div class="project-item">
+                <span class="project-time">08:00 – 08:20</span> · CIRCUIT BREAKERS
+                <br><small>Categoría: Tecnologías Emergentes</small>
+            </div>
+            <div class="project-item">
+                <span class="project-time">08:20 – 08:40</span> · Los C++ñores
+                <br><small>Categoría: Tecnologías para la Gestión Pública</small>
+            </div>
+            <div class="project-item">
+                <span class="project-time">08:40 – 09:00</span> · ARES
+                <br><small>Categoría: Tecnologías para el Entretenimiento</small>
+            </div>
+            <div class="project-item">
+                <span class="project-time">09:00 – 09:20</span> · sis5
+                <br><small>Categoría: Software Inteligente</small>
+            </div>
+        </div>
+    </div>
+
+    <h3>Indicaciones para los equipos</h3>
+    <ul>
+        <li>El 18 de mayo se darán a conocer los retos conforme a la categoría registrada por cada equipo.</li>
+        <li>El 19 de mayo cada equipo presentará su propuesta en el laboratorio asignado, LIA o LTE.</li>
+        <li>Cada participación tendrá una duración total de 20 minutos (7 min de exposición, 7 min de demo, 6 min de preguntas).</li>
+        <li>La propuesta deberá considerar los ejes transversales: inclusión y equidad, impacto social, sustentabilidad y sostenibilidad, y tecnologías emergentes.</li>
+        <li>La persona asesora no podrá intervenir durante la exposición, demostración ni en la ronda de preguntas.</li>
+    </ul>
+</section>
+
+<!-- Sección InnoBótica -->
+<section id="innobotica" class="event-section">
+    <h2>InnoBótica</h2>
+    <div class="coming-soon">
+        Información próximamente disponible. Desafíos de robótica y automatización.
+    </div>
+</section>
 
 <footer>
     <p>&copy; 2026 InnovaTecNM - Etapa Local. Academia de Ingeniería en Sistemas Computacionales.</p>
 </footer>
 
 <script>
-    // Smooth scrolling for navigation links
+    // Desplazamiento suave para enlaces de navegación
     document.querySelectorAll('nav a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
