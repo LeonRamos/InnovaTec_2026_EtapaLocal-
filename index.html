@@ -11,6 +11,8 @@
             --text-dark: #333;
             --bg-light: #f4f7f6;
             --white: #ffffff;
+            --orange-1: #ffb300;
+            --orange-2: #f57c00;
         }
 
         body {
@@ -76,6 +78,7 @@
             justify-content: center;
             padding: 10px 0;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            flex-wrap: wrap;
         }
 
         nav a {
@@ -220,6 +223,67 @@
             font-style: italic;
         }
 
+        .inauguration-section {
+            position: relative;
+            overflow: hidden;
+            background: radial-gradient(circle at top left, #ffd54f, var(--orange-1), var(--orange-2));
+            color: var(--white);
+        }
+
+        .inauguration-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at bottom right, rgba(26,35,126,0.55), transparent 60%);
+            mix-blend-mode: multiply;
+            opacity: 0.9;
+        }
+
+        .inauguration-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .inauguration-section h2 {
+            color: var(--white);
+            border-bottom-color: var(--white);
+        }
+
+        .inauguration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .inauguration-card {
+            background: rgba(0,0,0,0.15);
+            border-radius: 10px;
+            padding: 18px 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .inauguration-card.light {
+            background: rgba(255,255,255,0.12);
+        }
+
+        .inauguration-card h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .pill-invite {
+            display: inline-block;
+            margin-top: 6px;
+            padding: 8px 16px;
+            border-radius: 999px;
+            background: var(--primary-blue);
+            color: #fff;
+            font-weight: bold;
+            font-size: 0.95em;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+        }
+
         footer {
             text-align: center;
             padding: 30px;
@@ -244,6 +308,7 @@
 </header>
 
 <nav>
+    <a href="#inauguracion">Inauguración</a>
     <a href="#certamen">Certamen de Proyectos</a>
     <a href="#hackatec">HackaTec</a>
     <a href="#innobotica">InnoBótica</a>
@@ -259,211 +324,256 @@
     </a>
 </div>
 
-<!-- Sección Certamen de Proyectos -->
-<section id="certamen" class="event-section">
-    <h2>Certamen de Proyectos</h2>
-    <p>
-        Presentación de proyectos de innovación desarrollados por los estudiantes de la institución,
-        organizados por laboratorio y evaluados por jueces expertos.
-    </p>
+<div class="container">
 
-    <h3>Programa · 18 de mayo de 2026</h3>
+    <!-- Sección Inauguración -->
+    <section id="inauguracion" class="event-section inauguration-section">
+        <div class="inauguration-overlay"></div>
 
-    <div class="lab-cards">
-        <div class="lab-card">
-            <h4>Laboratorio LDS</h4>
-            <div class="project-item"><span class="project-time">10:00 – 10:20</span> · MicroEdu</div>
-            <div class="project-item"><span class="project-time">10:30 – 10:50</span> · EcoNet</div>
-            <div class="project-item"><span class="project-time">11:30 – 12:00</span> · Control fuga de gas inteligente</div>
-            <div class="project-item"><span class="project-time">12:00 – 12:30</span> · AutoModTrans G120TP-A</div>
-        </div>
+        <div class="inauguration-content">
+            <h2>Inauguración InnovaTec 2026</h2>
 
-        <div class="lab-card">
-            <h4>Laboratorio LIA</h4>
-            <div class="project-item"><span class="project-time">10:00 – 10:20</span> · ECO-PARQUE TURÍSTICO TOMATLÁN</div>
-            <div class="project-item"><span class="project-time">10:30 – 10:50</span> · Sistema de trazabilidad web</div>
-            <div class="project-item"><span class="project-time">11:30 – 11:50</span> · Red Moon</div>
-            <div class="project-item"><span class="project-time">12:00 – 12:20</span> · Vivienda modular Panel-W</div>
-            <div class="project-item"><span class="project-time">12:30 – 12:50</span> · Muchil</div>
-        </div>
+            <p style="font-size: 1.05em; max-width: 60rem;">
+                Invitamos cordialmente a toda la comunidad estudiantil, docente y administrativa
+                a participar en la inauguración oficial de la etapa local de <strong>InnovaTec 2026</strong>,
+                que se llevará a cabo en el Domo| Auditorio de la Unidad Academica Zapopan.
+            </p>
 
-        <div class="lab-card">
-            <h4>Laboratorio LTE</h4>
-            <div class="project-item"><span class="project-time">10:00 – 10:20</span> · La raíz de la ribera</div>
-            <div class="project-item"><span class="project-time">10:30 – 10:50</span> · BANZÚ</div>
-            <div class="project-item"><span class="project-time">11:30 – 11:50</span> · IZTLI</div>
-            <div class="project-item"><span class="project-time">12:00 – 12:30</span> · POZOLUPE-XPRESS</div>
-            <div class="project-item"><span class="project-time">12:30 – 12:50</span> · Tec Food</div>
-        </div>
+            <div class="inauguration-grid">
+                <div class="inauguration-card">
+                    <h3>Fecha y lugar</h3>
+                    <p><strong>Fecha:</strong> 18 de mayo de 2026</p>
+                    <p><strong>Horario:</strong> 09:00 – 10:00 h</p>
+                    <p><strong>Lugar:</strong> Domo del Instituto</p>
+                </div>
 
-        <div class="lab-card">
-            <h4>Laboratorio LIS</h4>
-            <div class="project-item"><span class="project-time">10:00 – 10:20</span> · TAT Manager</div>
-            <div class="project-item"><span class="project-time">10:30 – 10:50</span> · BiblioRed</div>
-            <div class="project-item"><span class="project-time">11:30 – 11:50</span> · Asapp-Shop</div>
-            <div class="project-item"><span class="project-time">12:00 – 12:20</span> · BioWhey</div>
-            <div class="project-item"><span class="project-time">12:30 – 12:50</span> · BarberApp</div>
-        </div>
+                <div class="inauguration-card light">
+                    <h3>Invitación abierta</h3>
+                    <p>
+                        Invitamos a toda la comunidad a sumarse a este acto de apertura,
+                        acompañar a los equipos participantes y formar parte del arranque
+                        de las actividades académicas y tecnológicas del evento.
+                    </p>
+                </div>
 
-        <div class="lab-card">
-            <h4>Laboratorio LRD</h4>
-            <div class="project-item"><span class="project-time">10:00 – 10:20</span> · AGAVEA</div>
-            <div class="project-item"><span class="project-time">10:30 – 10:50</span> · Resilio</div>
-            <div class="project-item"><span class="project-time">11:30 – 11:50</span> · AGAVITOS</div>
-            <div class="project-item"><span class="project-time">12:00 – 12:20</span> · VincuApp</div>
-        </div>
-
-        <div class="lab-card">
-            <h4>Laboratorio LTI</h4>
-            <div class="project-item"><span class="project-time">10:00 – 10:20</span> · Refugio Peña</div>
-            <div class="project-item"><span class="project-time">10:30 – 10:50</span> · HOBSUT</div>
-            <div class="project-item"><span class="project-time">11:30 – 11:50</span> · Legado Lacustre</div>
-            <div class="project-item"><span class="project-time">12:00 – 12:20</span> · Recycling Tracking System</div>
-        </div>
-    </div>
-</section>
-
-<!-- Sección HackaTec -->
-<section id="hackatec" class="event-section">
-    <h2>HackaTec</h2>
-
-    <p>
-        HackaTec forma parte de los eventos simultáneos de la etapa local de InnovaTecNM 2026. En esta edición,
-        los equipos desarrollarán de manera colaborativa e intensiva una propuesta de solución a un reto específico,
-        integrando tecnología, creatividad e innovación.
-    </p>
-
-    <h3>Agenda general</h3>
-    <table>
-        <thead>
-            <tr>
-                <th>Fecha</th>
-                <th>Horario</th>
-                <th>Actividad</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>18 de mayo de 2026</td>
-                <td>10:00 – 11:00</td>
-                <td>
-                    En el laboratorio LWI se asignaran los retos por categoría para los equipos participantes, considerando
-                    Tecnologías Emergentes, Tecnologías para la Gestión Pública, Tecnologías para el Entretenimiento
-                    y Software Inteligente.
-                </td>
-            </tr>
-            <tr>
-                <td>19 de mayo de 2026</td>
-                <td>10:00 – 13:00</td>
-                <td>
-                    Presentación de propuestas en los laboratorios LIA y LTE. Cada equipo contará con
-                    20 minutos totales para exposición, demostración y ronda de preguntas ante el jurado.
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h3>Retos y ejes transversales</h3>
-    <p>
-        Los retos de HackaTec se organizan en categorías como Tecnologías Emergentes, Tecnologías para la Gestión Pública,
-        Tecnologías para el Entretenimiento y Software Inteligente. Las propuestas deberán integrar los ejes transversales:
-        inclusión y equidad, impacto social, sustentabilidad y sostenibilidad, y tecnologías emergentes.
-    </p>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Elemento</th>
-                <th>Detalle</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Ejes transversales</td>
-                <td>Inclusión y equidad, impacto social, sustentabilidad y sostenibilidad, tecnologías emergentes.</td>
-            </tr>
-            <tr>
-                <td>Tiempo por equipo</td>
-                <td>20 minutos por presentación (exposición, demostración de prototipo y preguntas).</td>
-            </tr>
-            <tr>
-                <td>Participantes</td>
-                <td>
-                    Equipos multidisciplinarios de 3 a 5 estudiantes, con al menos una persona de sexo opuesto,
-                    asesorados por una persona docente.
-                </td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h3>Programa · 19 de mayo de 2026</h3>
-
-    <div class="lab-cards">
-        <div class="lab-card">
-            <h4>Laboratorio LIA</h4>
-            <div class="project-item">
-                <span class="project-time">10:00 – 10:20</span> · V-I-P
-                <br><small>Categoría: Tecnologías Emergentes</small>
-            </div>
-            <div class="project-item">
-                <span class="project-time">10:30 – 10:50</span> · SYNAP-Tech
-                <br><small>Categoría: Tecnologías Emergentes</small>
-            </div>
-            <div class="project-item">
-                <span class="project-time">11:30 – 12:00</span> · Metrica Exacta
-                <br><small>Categoría: Tecnologías para la Gestión Pública</small>
-            </div>
-            <div class="project-item">
-                <span class="project-time">12:00 – 10:300</span> · Optimus Team
-                <br><small>Categoría: Software Inteligente</small>
+                <div class="inauguration-card" style="text-align:center; display:flex; flex-direction:column; justify-content:center;">
+                    <p style="margin: 0 0 10px 0; font-weight: 600;">
+                        Iniciamos puntualmente a las 09:00 h
+                    </p>
+                    <p style="margin: 0 0 14px 0;">
+                        Concluiremos a las 10:00 h para dar inicio inmediato
+                        a las actividades programadas en cada sede y laboratorio.
+                    </p>
+                    <span class="pill-invite">¡Te esperamos en el Domo!</span>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="lab-card">
-            <h4>Laboratorio LTE</h4>
-            <div class="project-item">
-                <span class="project-time">10:00 – 10:20</span> · CIRCUIT BREAKERS
-                <br><small>Categoría: Tecnologías Emergentes</small>
+    <!-- Sección Certamen de Proyectos -->
+    <section id="certamen" class="event-section">
+        <h2>Certamen de Proyectos</h2>
+        <p>
+            Presentación de proyectos de innovación desarrollados por los estudiantes de la institución,
+            organizados por laboratorio y evaluados por jueces expertos.
+        </p>
+
+        <h3>Programa · 18 de mayo de 2026</h3>
+
+        <div class="lab-cards">
+            <div class="lab-card">
+                <h4>Laboratorio LDS</h4>
+                <div class="project-item"><span class="project-time">10:00 – 10:20</span> · MicroEdu</div>
+                <div class="project-item"><span class="project-time">10:30 – 10:50</span> · EcoNet</div>
+                <div class="project-item"><span class="project-time">11:30 – 12:00</span> · Control fuga de gas inteligente</div>
+                <div class="project-item"><span class="project-time">12:00 – 12:30</span> · AutoModTrans G120TP-A</div>
             </div>
-            <div class="project-item">
-                <span class="project-time">10:30 – 10:50</span> · Los C++ñores
-                <br><small>Categoría: Tecnologías para la Gestión Pública</small>
+
+            <div class="lab-card">
+                <h4>Laboratorio LIA</h4>
+                <div class="project-item"><span class="project-time">10:00 – 10:20</span> · ECO-PARQUE TURÍSTICO TOMATLÁN</div>
+                <div class="project-item"><span class="project-time">10:30 – 10:50</span> · Sistema de trazabilidad web</div>
+                <div class="project-item"><span class="project-time">11:30 – 11:50</span> · Red Moon</div>
+                <div class="project-item"><span class="project-time">12:00 – 12:20</span> · Vivienda modular Panel-W</div>
+                <div class="project-item"><span class="project-time">12:30 – 12:50</span> · Muchil</div>
             </div>
-            <div class="project-item">
-                <span class="project-time">11:30 – 12:00</span> · ARES
-                <br><small>Categoría: Tecnologías para el Entretenimiento</small>
+
+            <div class="lab-card">
+                <h4>Laboratorio LTE</h4>
+                <div class="project-item"><span class="project-time">10:00 – 10:20</span> · La raíz de la ribera</div>
+                <div class="project-item"><span class="project-time">10:30 – 10:50</span> · BANZÚ</div>
+                <div class="project-item"><span class="project-time">11:30 – 11:50</span> · IZTLI</div>
+                <div class="project-item"><span class="project-time">12:00 – 12:30</span> · POZOLUPE-XPRESS</div>
+                <div class="project-item"><span class="project-time">12:30 – 12:50</span> · Tec Food</div>
             </div>
-            <div class="project-item">
-                <span class="project-time">12:00 – 12:30</span> · sis5
-                <br><small>Categoría: Software Inteligente</small>
+
+            <div class="lab-card">
+                <h4>Laboratorio LIS</h4>
+                <div class="project-item"><span class="project-time">10:00 – 10:20</span> · TAT Manager</div>
+                <div class="project-item"><span class="project-time">10:30 – 10:50</span> · BiblioRed</div>
+                <div class="project-item"><span class="project-time">11:30 – 11:50</span> · Asapp-Shop</div>
+                <div class="project-item"><span class="project-time">12:00 – 12:20</span> · BioWhey</div>
+                <div class="project-item"><span class="project-time">12:30 – 12:50</span> · BarberApp</div>
+            </div>
+
+            <div class="lab-card">
+                <h4>Laboratorio LRD</h4>
+                <div class="project-item"><span class="project-time">10:00 – 10:20</span> · AGAVEA</div>
+                <div class="project-item"><span class="project-time">10:30 – 10:50</span> · Resilio</div>
+                <div class="project-item"><span class="project-time">11:30 – 11:50</span> · AGAVITOS</div>
+                <div class="project-item"><span class="project-time">12:00 – 12:20</span> · VincuApp</div>
+            </div>
+
+            <div class="lab-card">
+                <h4>Laboratorio LTI</h4>
+                <div class="project-item"><span class="project-time">10:00 – 10:20</span> · Refugio Peña</div>
+                <div class="project-item"><span class="project-time">10:30 – 10:50</span> · HOBSUT</div>
+                <div class="project-item"><span class="project-time">11:30 – 11:50</span> · Legado Lacustre</div>
+                <div class="project-item"><span class="project-time">12:00 – 12:20</span> · Recycling Tracking System</div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <h3>Indicaciones para los equipos</h3>
-    <ul>
-        <li>El 18 de mayo se darán a conocer los retos conforme a la categoría registrada por cada equipo en el laboratorio LWI.</li>
-        <li>El 19 de mayo cada equipo presentará su propuesta en el laboratorio asignado, LIA o LTE.</li>
-        <li>Cada participación tendrá una duración total de 20 minutos (7 min de exposición, 7 min de demo, 6 min de preguntas).</li>
-        <li>La propuesta deberá considerar los ejes transversales: inclusión y equidad, impacto social, sustentabilidad y sostenibilidad, y tecnologías emergentes.</li>
-        <li>La persona asesora no podrá intervenir durante la exposición, demostración ni en la ronda de preguntas.</li>
-    </ul>
-</section>
+    <!-- Sección HackaTec -->
+    <section id="hackatec" class="event-section">
+        <h2>HackaTec</h2>
 
-<!-- Sección InnoBótica -->
-<section id="innobotica" class="event-section">
-    <h2>InnoBótica</h2>
-    <div class="coming-soon">
-        Información próximamente disponible. Desafíos de robótica y automatización.
-    </div>
-</section>
+        <p>
+            HackaTec forma parte de los eventos simultáneos de la etapa local de InnovaTecNM 2026.
+            En esta edición, los equipos desarrollarán de manera colaborativa e intensiva una propuesta
+            de solución a un reto específico, integrando tecnología, creatividad e innovación.
+        </p>
+
+        <h3>Agenda general</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Horario</th>
+                    <th>Actividad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>18 de mayo de 2026</td>
+                    <td>10:00 – 11:00</td>
+                    <td>
+                        Asignación y explicación de retos por categoría para los equipos participantes.
+                        Se trabajará con categorías como Tecnologías Emergentes, Tecnologías para la Gestión Pública,
+                        Tecnologías para el Entretenimiento y Software Inteligente.
+                    </td>
+                </tr>
+                <tr>
+                    <td>19 de mayo de 2026</td>
+                    <td>10:00 – 12:00</td>
+                    <td>
+                        Presentación de propuestas en los laboratorios LIA y LTE.
+                        Cada equipo contará con 20 minutos totales para exposición,
+                        demostración y ronda de preguntas ante el jurado.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Retos y ejes transversales</h3>
+        <p>
+            Los retos de HackaTec se organizan en categorías como Tecnologías Emergentes,
+            Tecnologías para la Gestión Pública, Tecnologías para el Entretenimiento y Software Inteligente.
+            Las propuestas deberán integrar los ejes transversales: inclusión y equidad,
+            impacto social, sustentabilidad y sostenibilidad, y tecnologías emergentes.
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Elemento</th>
+                    <th>Detalle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ejes transversales</td>
+                    <td>Inclusión y equidad, impacto social, sustentabilidad y sostenibilidad, tecnologías emergentes.</td>
+                </tr>
+                <tr>
+                    <td>Tiempo por equipo</td>
+                    <td>20 minutos por presentación (7 min de exposición, 7 min de demostración y 6 min de preguntas).</td>
+                </tr>
+                <tr>
+                    <td>Participantes</td>
+                    <td>Equipos multidisciplinarios de 3 a 5 estudiantes, con asesoría docente.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Programa · 19 de mayo de 2026</h3>
+
+        <div class="lab-cards">
+            <div class="lab-card">
+                <h4>Laboratorio LIA</h4>
+                <div class="project-item">
+                    <span class="project-time">10:00 – 10:20</span> · V-I-P
+                    <br><small>Categoría: Tecnologías Emergentes</small>
+                </div>
+                <div class="project-item">
+                    <span class="project-time">10:20 – 10:40</span> · SYNAP-Tech
+                    <br><small>Categoría: Tecnologías Emergentes</small>
+                </div>
+                <div class="project-item">
+                    <span class="project-time">10:40 – 11:00</span> · Metrica Exacta
+                    <br><small>Categoría: Tecnologías para la Gestión Pública</small>
+                </div>
+                <div class="project-item">
+                    <span class="project-time">11:00 – 11:20</span> · Optimus Team
+                    <br><small>Categoría: Software Inteligente</small>
+                </div>
+            </div>
+
+            <div class="lab-card">
+                <h4>Laboratorio LTE</h4>
+                <div class="project-item">
+                    <span class="project-time">10:00 – 10:20</span> · CIRCUIT BREAKERS
+                    <br><small>Categoría: Tecnologías Emergentes</small>
+                </div>
+                <div class="project-item">
+                    <span class="project-time">10:20 – 10:40</span> · Los C++ñores
+                    <br><small>Categoría: Tecnologías para la Gestión Pública</small>
+                </div>
+                <div class="project-item">
+                    <span class="project-time">10:40 – 11:00</span> · ARES
+                    <br><small>Categoría: Tecnologías para el Entretenimiento</small>
+                </div>
+                <div class="project-item">
+                    <span class="project-time">11:00 – 11:20</span> · sis5
+                    <br><small>Categoría: Software Inteligente</small>
+                </div>
+            </div>
+        </div>
+
+        <h3>Indicaciones para los equipos</h3>
+        <ul>
+            <li>El 18 de mayo se darán a conocer los retos conforme a la categoría registrada por cada equipo.</li>
+            <li>El 19 de mayo cada equipo presentará su propuesta en el laboratorio asignado, LIA o LTE.</li>
+            <li>Cada participación tendrá una duración total de 20 minutos.</li>
+            <li>La propuesta deberá considerar los ejes transversales: inclusión y equidad, impacto social, sustentabilidad y sostenibilidad, y tecnologías emergentes.</li>
+            <li>La persona asesora no podrá intervenir durante la exposición, demostración ni en la ronda de preguntas.</li>
+        </ul>
+    </section>
+
+    <!-- Sección InnoBótica -->
+    <section id="innobotica" class="event-section">
+        <h2>InnoBótica</h2>
+        <div class="coming-soon">
+            Información próximamente disponible. Desafíos de robótica y automatización.
+        </div>
+    </section>
+</div>
 
 <footer>
     <p>&copy; 2026 InnovaTecNM - Etapa Local. Academia de Ingeniería en Sistemas Computacionales.</p>
 </footer>
 
 <script>
-    // Desplazamiento suave para enlaces de navegación
     document.querySelectorAll('nav a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
