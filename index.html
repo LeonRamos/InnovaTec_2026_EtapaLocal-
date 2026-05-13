@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovaTec 2026 - Etapa Local</title>
+    <style>
+        :root {
+            --primary-blue: #1a237e;
+            --accent-gold: #ffd700;
+            --text-dark: #333;
+            --bg-light: #f4f7f6;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        header {
+    background: linear-gradient(135deg, var(--primary-blue), #0d47a1);
+    color: var(--white);
+    padding: 30px 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-content img {
+    max-height: 120px;
+    width: auto;
+}
+
+.header-text {
+    text-align: center;
+}
+
+.header-text h1 {
+    margin: 0;
+}
+
+.header-text p {
+    margin-top: 8px;
+    font-size: 1.1em;
+    opacity: 0.95;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .header-content img {
+        margin: 0 auto;
+    }
+}
+
+        nav {
+            background: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--primary-blue);
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .event-section {
+            background: var(--white);
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary-blue);
+            border-bottom: 3px solid var(--accent-gold);
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+
+        .hero-img {
+            width: 100%;
+            max-width: 800px;
+            display: block;
+            margin: 0 auto 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .links-bar {
+            text-align: center;
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Espacio entre botones */
+            flex-wrap: wrap;
+        }
+
+        .btn-link {
+            background: var(--primary-blue);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.95em;
+            font-weight: bold;
+            transition: transform 0.2s, background 0.3s;
+            display: inline-block;
+            border: none;
+        }
+
+/* Estilo específico para el botón del PDF para diferenciarlo */
+        .btn-pdf {
+            background: #c62828; /* Rojo formal para PDF */
+        }
+
+        .btn-link:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+            color: white;
+        }
+            .lab-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.lab-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    padding: 20px;
+    transition: transform 0.2s;
+}
+
+.lab-card:hover {
+    transform: translateY(-4px);
+}
+
+.lab-card h4 {
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--accent-gold);
+    padding-bottom: 5px;
+}
+
+.project-item {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.project-time {
+    font-weight: bold;
+    color: #555;
+}
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        th {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: left;
+            padding: 12px;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .coming-soon {
+            padding: 40px;
+            text-align: center;
+            background: #eee;
+            border-radius: 8px;
+            color: #666;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #333;
+            color: white;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+
+        <!-- Imagen izquierda -->
+        <img src="img/innovatecmm.png" alt="InnovaTec">
+
+        <!-- Texto central -->
+        <div class="header-text">
+            <h1>InnovaTec 2026 - Etapa Local</h1>
+            <p>Innovación Tecnológica para el Desarrollo Sostenible</p>
+        </div>
+
+        <!-- Imagen derecha -->
+        <img src="img/categorias.png" alt="Categorías InnovaTec">
+
+    </div>
+</header>
+
+<nav>
+    <a href="#certamen">Certamen de Proyectos</a>
+    <a href="#hackatec">HackaTec</a>
+    <a href="#innobotica">InnoBótica</a>
+</nav>
+
+<div class="links-bar">
+    <a href="poster/poster.pdf" target="_blank" class="btn-link btn-pdf">Ver Póster Etapa Local (PDF)</a>
+    
+    <a href="https://innova.tecnm.mx/" target="_blank" class="btn-link">Sitio Oficial TecNM</a>
+</div>
+
+    <!-- Sección Certamen de Proyectos -->
+    <section id="certamen" class="event-section">
+    <h2>Certamen de Proyectos</h2>
+    <p>
+        Presentación de proyectos de innovación desarrollados por los estudiantes de la institución,
+        organizados por laboratorio y evaluados por jueces expertos.
+    </p>
+
+    <h3>Programa · 18 de mayo de 2026</h3>
+
+    <div class="lab-cards">
+
+        <div class="lab-card">
+            <h4>Laboratorio LDS</h4>
+            <div class="project-item"><span class="project-time">10:00 – 10:20</span> · MicroEdu</div>
+            <div class="project-item"><span class="project-time">10:30 – 10:50</span> · EcoNet</div>
+            <div class="project-item"><span class="project-time">11:30 – 12:00</span> · Control fuga de gas inteligente</div>
+            <div class="project-item"><span class="project-time">12:00 – 12:30</span> · AutoModTrans G120TP-A</div>
+        </div>
+
+        <div class="lab-card">
+            <h4>Laboratorio LIA</h4>
+            <div class="project-item"><span class="project-time">10:00 – 10:20</span> · ECO-PARQUE TURÍSTICO TOMATLÁN</div>
+            <div class="project-item"><span class="project-time">10:30 – 10:50</span> · Sistema de trazabilidad web</div>
+            <div class="project-item"><span class="project-time">11:30 – 11:50</span> · Red Moon</div>
+            <div class="project-item"><span class="project-time">12:00 – 12:20</span> · Vivienda modular Panel-W</div>
+            <div class="project-item"><span class="project-time">12:30 – 12:50</span> · Muchil</div>
+        </div>
+
+        <div class="lab-card">
+            <h4>Laboratorio LTE</h4>
+            <div class="project-item"><span class="project-time">10:00 – 10:20</span> · La raíz de la ribera</div>
+            <div class="project-item"><span class="project-time">10:30 – 10:50</span> · BANZÚ</div>
+            <div class="project-item"><span class="project-time">11:30 – 11:50</span> · IZTLI</div>
+            <div class="project-item"><span class="project-time">12:00 – 12:30</span> · POZOLUPE-XPRESS</div>
+            <div class="project-item"><span class="project-time">12:30 – 12:50</span> · Tec Food</div>
+        </div>
+
+        <div class="lab-card">
+            <h4>Laboratorio LIS</h4>
+            <div class="project-item"><span class="project-time">10:00 – 10:20</span> · TAT Manager</div>
+            <div class="project-item"><span class="project-time">10:30 – 10:50</span> · BiblioRed</div>
+            <div class="project-item"><span class="project-time">11:30 – 11:50</span> · Asapp-Shop</div>
+            <div class="project-item"><span class="project-time">12:00 – 12:20</span> · BioWhey</div>
+            <div class="project-item"><span class="project-time">12:30 – 12:50</span> · BarberApp</div>
+        </div>
+
+        <div class="lab-card">
+            <h4>Laboratorio LRD</h4>
+            <div class="project-item"><span class="project-time">10:00 – 10:20</span> · AGAVEA</div>
+            <div class="project-item"><span class="project-time">10:30 – 10:50</span> · Resilio</div>
+            <div class="project-item"><span class="project-time">11:30 – 11:50</span> · AGAVITOS</div>
+            <div class="project-item"><span class="project-time">12:00 – 12:20</span> · VincuApp</div>
+        </div>
+
+        <div class="lab-card">
+            <h4>Laboratorio LTI</h4>
+            <div class="project-item"><span class="project-time">10:00 – 10:20</span> · Refugio Peña</div>
+            <div class="project-item"><span class="project-time">10:30 – 10:50</span> · HOBSUT</div>
+            <div class="project-item"><span class="project-time">11:30 – 11:50</span> · Legado Lacustre</div>
+            <div class="project-item"><span class="project-time">12:00 – 12:20</span> · Recycling Tracking System</div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Sección HackaTec -->
+    <section id="hackatec" class="event-section">
+        <h2>HackaTec</h2>
+        <div class="coming-soon">
+            Información próximamente disponible. Secciones adicionales se integrarán según avance la planeación.
+        </div>
+    </section>
+
+    <!-- Sección InnoBótica -->
+    <section id="innobotica" class="event-section">
+        <h2>InnoBótica</h2>
+        <div class="coming-soon">
+            Información próximamente disponible. Desafíos de robótica y automatización.
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2026 InnovaTecNM - Etapa Local. Academia de Ingeniería en Sistemas Computacionales.</p>
+</footer>
+
+<script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
